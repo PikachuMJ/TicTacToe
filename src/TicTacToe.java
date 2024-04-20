@@ -33,7 +33,7 @@ public class TicTacToe extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton clickedButton = (JButton) e.getSource();
-        if (!clickedButton.getText().equals("")) {
+        if (!clickedButton.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Wird schon benutzt", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -75,7 +75,7 @@ public class TicTacToe extends JFrame implements ActionListener {
     private boolean checkDraw() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (buttons[i][j].getText().equals("")) {
+                if (buttons[i][j].getText().isEmpty()) {
                     return false;
                 }
             }
