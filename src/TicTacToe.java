@@ -11,6 +11,7 @@ public class TicTacToe extends JFrame implements ActionListener {
     public TicTacToe() {
         setTitle("TicTacToe");
         setSize(300, 300);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 3));
         initializeButtons();
